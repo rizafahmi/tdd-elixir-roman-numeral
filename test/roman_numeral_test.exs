@@ -31,8 +31,20 @@ defmodule RomanNumeralTest do
     assert create(77) == "LXXVII"
   end
 
-
   test "1000 becomes M" do
     assert create(1000) == "M"
+  end
+
+  test "unhappy cases" do
+    assert create(4) == "IV"
+    assert create(9) == "IX"
+    assert create(40) == "XL"
+    assert create(90) == "XC"
+    assert create(400) == "CD"
+    assert create(900) == "CM"
+  end
+
+  test "1954 becomes MCMLIV" do
+    assert create(1954) == "MCMLIV"
   end
 end
