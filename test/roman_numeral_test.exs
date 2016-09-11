@@ -47,4 +47,8 @@ defmodule RomanNumeralTest do
   test "1954 becomes MCMLIV" do
     assert create(1954) == "MCMLIV"
   end
+
+  test "1666 becomes MDCLXVI" do
+    assert create(1666) == "MDCLXVI"
+  end
 end
