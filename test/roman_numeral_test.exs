@@ -19,6 +19,18 @@ defmodule RomanNumeralTest do
     assert create(5) == "V"
   end
 
+  test "7 becomes VII" do
+    assert create(7) == "VII"
+  end
+
+  test "13 becomes XIII" do
+    assert create(13) == "XIII"
+  end
+
+  test "77 becomes LXXVII" do
+    assert create(77) == "LXXVII"
+  end
+
 
   test "1000 becomes M" do
     assert create(1000) == "M"
