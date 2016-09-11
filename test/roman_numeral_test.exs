@@ -7,4 +7,20 @@ defmodule RomanNumeralTest do
     assert create(0) == "nvlla"
   end
 
+  test "1 becomes I" do
+    assert create(1) == "I"
+  end
+
+  test "2 becomes II" do
+    assert create(2) == "II"
+  end
+
+  test "5 becomes V" do
+    assert create(5) == "V"
+  end
+
+
+  test "1000 becomes M" do
+    assert create(1000) == "M"
+  end
 end
